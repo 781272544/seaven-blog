@@ -1,0 +1,1303 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="归档: 2022, Vue分享学习,React分享学习,网页特效,网页模板,uni-app分享,Css3,Html5,Javascript,教程,JS特效">
+    <meta name="description" content="本站致力于收集、分享各种Web前端技术好文，以及插件和特效的详细使用方法,在线预览和教程">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>归档: 2022 | 68html-Web前端技术分享大全</title>
+    <link rel="icon" type="image/png" href="/seaven-blog/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/seaven-blog/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/seaven-blog/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/seaven-blog/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/seaven-blog/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/seaven-blog/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/seaven-blog/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/seaven-blog/css/my.css">
+
+    <script src="/seaven-blog/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+
+
+<body>
+    <!--<header class="navbar-fixed">-->
+<!--    <nav id="headNav" class="bg-color nav-transparent">-->
+<!--        <div id="navContainer" class="nav-wrapper container">-->
+<!--            <div class="brand-logo">-->
+<!--                <a href="/seaven-blog/" class="waves-effect waves-light">-->
+<!--                    -->
+<!--                    <img src="/seaven-blog/medias/logo.png" class="logo-img" alt="LOGO">-->
+<!--                    -->
+<!--&lt;!&ndash;                    <span class="logo-span">68html-Web前端技术分享大全</span>&ndash;&gt;-->
+<!--                </a>-->
+<!--            </div>-->
+<!--&lt;!&ndash;             partial('_partial/navigation')&ndash;&gt;-->
+<!--        </div>-->
+
+<!--    </nav>-->
+
+<!--</header>-->
+
+    <style>
+    .iframe-canvas{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 0;
+    }
+</style>
+
+<div class="bg-cover pd-header about-cover">
+    <iframe src="https://www.jq22.com/js/a10.html" class="iframe-canvas"></iframe>
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand center-align">
+            <a href="/seaven-blog/">
+                <img src="/seaven-blog/medias/logo.png" class="logo-img" alt="LOGO" style="height: 60px">
+            </a>
+            <div class="title center-align">
+                
+                WEB前端技术分享大全
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['从来没有真正的绝境, 只有心灵的迷途','坚持梦想, 为之拼搏, 努力奋斗','人生最难做到的就是坚持, 最容易的就是放弃','人生短暂, 不留遗憾, 我心所想, 势不可挡','做人应不卑不亢, 从容优雅, 面对一切'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    <!--var bannerUrl = "/seaven-blog/medias/banner/" + new Date().getDay() + '.jpg';-->
+    // $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+    </div>
+</div>
+
+
+<main class="content">
+
+    
+    <div class="container archive-calendar">
+    <div class="card">
+        <div id="post-calendar" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/seaven-blog/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript">
+    let myChart = echarts.init(document.getElementById('post-calendar'));
+
+    
+
+    let option = {
+        title: {
+            top: 0,
+            text: '文章日历',
+            left: 'center',
+            textStyle: {
+                color: '#3C4858'
+            }
+        },
+        tooltip: {
+            padding: 10,
+            backgroundColor: '#555',
+            borderColor: '#777',
+            borderWidth: 1,
+            formatter: function (obj) {
+                var value = obj.value;
+                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
+            }
+        },
+        visualMap: {
+            show: true,
+            showLabel: true,
+            categories: [0, 1, 2, 3, 4],
+            calculable: true,
+            inRange: {
+                symbol: 'rect',
+                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
+            },
+            itemWidth: 12,
+            itemHeight: 12,
+            orient: 'horizontal',
+            left: 'center',
+            bottom: 0
+        },
+        calendar: [{
+            left: 'center',
+            range: ["2021-04-07", "2022-04-07"],
+            cellSize: [13, 13],
+            splitLine: {
+                show: false
+            },
+            itemStyle: {
+                color: '#196127',
+                borderColor: '#fff',
+                borderWidth: 2
+            },
+            yearLabel: {
+                show: false
+            },
+            monthLabel: {
+                nameMap: 'cn',
+                fontSize: 11
+            },
+            dayLabel: {
+                formatter: '{start}  1st',
+                nameMap: 'cn',
+                fontSize: 11
+            }
+        }],
+        series: [{
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            calendarIndex: 0,
+            data: [["2021-04-07", 0], ["2021-04-08", 0], ["2021-04-09", 0], ["2021-04-10", 0], ["2021-04-11", 0], ["2021-04-12", 0], ["2021-04-13", 0], ["2021-04-14", 0], ["2021-04-15", 0], ["2021-04-16", 0], ["2021-04-17", 0], ["2021-04-18", 0], ["2021-04-19", 0], ["2021-04-20", 0], ["2021-04-21", 0], ["2021-04-22", 0], ["2021-04-23", 0], ["2021-04-24", 0], ["2021-04-25", 0], ["2021-04-26", 0], ["2021-04-27", 0], ["2021-04-28", 0], ["2021-04-29", 0], ["2021-04-30", 0], ["2021-05-01", 0], ["2021-05-02", 0], ["2021-05-03", 0], ["2021-05-04", 0], ["2021-05-05", 0], ["2021-05-06", 0], ["2021-05-07", 0], ["2021-05-08", 0], ["2021-05-09", 0], ["2021-05-10", 0], ["2021-05-11", 0], ["2021-05-12", 0], ["2021-05-13", 0], ["2021-05-14", 0], ["2021-05-15", 0], ["2021-05-16", 0], ["2021-05-17", 0], ["2021-05-18", 0], ["2021-05-19", 0], ["2021-05-20", 0], ["2021-05-21", 0], ["2021-05-22", 0], ["2021-05-23", 0], ["2021-05-24", 0], ["2021-05-25", 0], ["2021-05-26", 0], ["2021-05-27", 0], ["2021-05-28", 0], ["2021-05-29", 0], ["2021-05-30", 0], ["2021-05-31", 0], ["2021-06-01", 0], ["2021-06-02", 0], ["2021-06-03", 0], ["2021-06-04", 0], ["2021-06-05", 0], ["2021-06-06", 0], ["2021-06-07", 0], ["2021-06-08", 0], ["2021-06-09", 0], ["2021-06-10", 0], ["2021-06-11", 0], ["2021-06-12", 0], ["2021-06-13", 0], ["2021-06-14", 0], ["2021-06-15", 0], ["2021-06-16", 0], ["2021-06-17", 0], ["2021-06-18", 0], ["2021-06-19", 0], ["2021-06-20", 0], ["2021-06-21", 0], ["2021-06-22", 0], ["2021-06-23", 0], ["2021-06-24", 0], ["2021-06-25", 0], ["2021-06-26", 0], ["2021-06-27", 0], ["2021-06-28", 0], ["2021-06-29", 0], ["2021-06-30", 0], ["2021-07-01", 0], ["2021-07-02", 0], ["2021-07-03", 0], ["2021-07-04", 0], ["2021-07-05", 0], ["2021-07-06", 0], ["2021-07-07", 0], ["2021-07-08", 0], ["2021-07-09", 0], ["2021-07-10", 0], ["2021-07-11", 0], ["2021-07-12", 0], ["2021-07-13", 0], ["2021-07-14", 0], ["2021-07-15", 0], ["2021-07-16", 0], ["2021-07-17", 0], ["2021-07-18", 0], ["2021-07-19", 0], ["2021-07-20", 0], ["2021-07-21", 0], ["2021-07-22", 0], ["2021-07-23", 0], ["2021-07-24", 0], ["2021-07-25", 0], ["2021-07-26", 0], ["2021-07-27", 0], ["2021-07-28", 0], ["2021-07-29", 0], ["2021-07-30", 0], ["2021-07-31", 0], ["2021-08-01", 0], ["2021-08-02", 0], ["2021-08-03", 0], ["2021-08-04", 0], ["2021-08-05", 0], ["2021-08-06", 0], ["2021-08-07", 0], ["2021-08-08", 0], ["2021-08-09", 0], ["2021-08-10", 0], ["2021-08-11", 0], ["2021-08-12", 0], ["2021-08-13", 0], ["2021-08-14", 0], ["2021-08-15", 0], ["2021-08-16", 0], ["2021-08-17", 0], ["2021-08-18", 0], ["2021-08-19", 0], ["2021-08-20", 0], ["2021-08-21", 0], ["2021-08-22", 0], ["2021-08-23", 0], ["2021-08-24", 0], ["2021-08-25", 0], ["2021-08-26", 0], ["2021-08-27", 0], ["2021-08-28", 0], ["2021-08-29", 0], ["2021-08-30", 0], ["2021-08-31", 0], ["2021-09-01", 0], ["2021-09-02", 0], ["2021-09-03", 0], ["2021-09-04", 0], ["2021-09-05", 0], ["2021-09-06", 0], ["2021-09-07", 0], ["2021-09-08", 0], ["2021-09-09", 0], ["2021-09-10", 0], ["2021-09-11", 0], ["2021-09-12", 0], ["2021-09-13", 0], ["2021-09-14", 0], ["2021-09-15", 0], ["2021-09-16", 0], ["2021-09-17", 0], ["2021-09-18", 0], ["2021-09-19", 0], ["2021-09-20", 0], ["2021-09-21", 0], ["2021-09-22", 0], ["2021-09-23", 0], ["2021-09-24", 0], ["2021-09-25", 0], ["2021-09-26", 0], ["2021-09-27", 0], ["2021-09-28", 0], ["2021-09-29", 0], ["2021-09-30", 0], ["2021-10-01", 0], ["2021-10-02", 0], ["2021-10-03", 0], ["2021-10-04", 0], ["2021-10-05", 0], ["2021-10-06", 0], ["2021-10-07", 0], ["2021-10-08", 0], ["2021-10-09", 0], ["2021-10-10", 0], ["2021-10-11", 0], ["2021-10-12", 0], ["2021-10-13", 0], ["2021-10-14", 0], ["2021-10-15", 0], ["2021-10-16", 0], ["2021-10-17", 0], ["2021-10-18", 0], ["2021-10-19", 0], ["2021-10-20", 0], ["2021-10-21", 0], ["2021-10-22", 0], ["2021-10-23", 0], ["2021-10-24", 0], ["2021-10-25", 0], ["2021-10-26", 0], ["2021-10-27", 0], ["2021-10-28", 0], ["2021-10-29", 0], ["2021-10-30", 0], ["2021-10-31", 0], ["2021-11-01", 0], ["2021-11-02", 0], ["2021-11-03", 0], ["2021-11-04", 0], ["2021-11-05", 0], ["2021-11-06", 0], ["2021-11-07", 0], ["2021-11-08", 0], ["2021-11-09", 0], ["2021-11-10", 0], ["2021-11-11", 0], ["2021-11-12", 0], ["2021-11-13", 0], ["2021-11-14", 0], ["2021-11-15", 0], ["2021-11-16", 0], ["2021-11-17", 0], ["2021-11-18", 0], ["2021-11-19", 0], ["2021-11-20", 0], ["2021-11-21", 0], ["2021-11-22", 0], ["2021-11-23", 0], ["2021-11-24", 0], ["2021-11-25", 0], ["2021-11-26", 0], ["2021-11-27", 0], ["2021-11-28", 0], ["2021-11-29", 0], ["2021-11-30", 0], ["2021-12-01", 0], ["2021-12-02", 0], ["2021-12-03", 0], ["2021-12-04", 0], ["2021-12-05", 0], ["2021-12-06", 0], ["2021-12-07", 0], ["2021-12-08", 0], ["2021-12-09", 0], ["2021-12-10", 0], ["2021-12-11", 0], ["2021-12-12", 0], ["2021-12-13", 0], ["2021-12-14", 0], ["2021-12-15", 0], ["2021-12-16", 0], ["2021-12-17", 0], ["2021-12-18", 0], ["2021-12-19", 0], ["2021-12-20", 0], ["2021-12-21", 0], ["2021-12-22", 0], ["2021-12-23", 0], ["2021-12-24", 0], ["2021-12-25", 0], ["2021-12-26", 0], ["2021-12-27", 0], ["2021-12-28", 0], ["2021-12-29", 0], ["2021-12-30", 0], ["2021-12-31", 0], ["2022-01-01", 0], ["2022-01-02", 0], ["2022-01-03", 0], ["2022-01-04", 0], ["2022-01-05", 0], ["2022-01-06", 0], ["2022-01-07", 0], ["2022-01-08", 0], ["2022-01-09", 0], ["2022-01-10", 0], ["2022-01-11", 0], ["2022-01-12", 0], ["2022-01-13", 0], ["2022-01-14", 0], ["2022-01-15", 0], ["2022-01-16", 0], ["2022-01-17", 0], ["2022-01-18", 0], ["2022-01-19", 0], ["2022-01-20", 0], ["2022-01-21", 0], ["2022-01-22", 0], ["2022-01-23", 0], ["2022-01-24", 0], ["2022-01-25", 0], ["2022-01-26", 0], ["2022-01-27", 0], ["2022-01-28", 0], ["2022-01-29", 0], ["2022-01-30", 0], ["2022-01-31", 0], ["2022-02-01", 0], ["2022-02-02", 0], ["2022-02-03", 0], ["2022-02-04", 0], ["2022-02-05", 0], ["2022-02-06", 0], ["2022-02-07", 0], ["2022-02-08", 0], ["2022-02-09", 0], ["2022-02-10", 0], ["2022-02-11", 0], ["2022-02-12", 0], ["2022-02-13", 0], ["2022-02-14", 0], ["2022-02-15", 0], ["2022-02-16", 0], ["2022-02-17", 0], ["2022-02-18", 0], ["2022-02-19", 0], ["2022-02-20", 0], ["2022-02-21", 0], ["2022-02-22", 0], ["2022-02-23", 0], ["2022-02-24", 0], ["2022-02-25", 0], ["2022-02-26", 0], ["2022-02-27", 0], ["2022-02-28", 0], ["2022-03-01", 0], ["2022-03-02", 0], ["2022-03-03", 0], ["2022-03-04", 0], ["2022-03-05", 0], ["2022-03-06", 0], ["2022-03-07", 0], ["2022-03-08", 0], ["2022-03-09", 0], ["2022-03-10", 0], ["2022-03-11", 0], ["2022-03-12", 0], ["2022-03-13", 0], ["2022-03-14", 0], ["2022-03-15", 0], ["2022-03-16", 0], ["2022-03-17", 0], ["2022-03-18", 0], ["2022-03-19", 0], ["2022-03-20", 0], ["2022-03-21", 0], ["2022-03-22", 0], ["2022-03-23", 0], ["2022-03-24", 0], ["2022-03-25", 0], ["2022-03-26", 0], ["2022-03-27", 0], ["2022-03-28", 0], ["2022-03-29", 0], ["2022-03-30", 0], ["2022-03-31", 0], ["2022-04-01", 0], ["2022-04-02", 1], ["2022-04-03", 1], ["2022-04-04", 0], ["2022-04-05", 1], ["2022-04-06", 3], ["2022-04-07", 9]]
+        }]
+
+    };
+
+    myChart.setOption(option);
+</script>
+
+    
+
+    
+
+    <div id="cd-timeline" class="container">
+        
+        <div class="cd-timeline-block">
+
+            
+            
+            
+            <div class="cd-timeline-img year" data-aos="zoom-in-up">
+                <a href="/seaven-blog/archives/2022">2022</a>
+            </div>
+            
+
+            
+            
+            
+            <div class="cd-timeline-img month" data-aos="zoom-in-up">
+                <a href="/seaven-blog/archives/2022/04">04</a>
+            </div>
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>07</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/07/javascript/JSZhongDeAsyncYuAwaitZenMeShiYong/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/1.jpg" class="responsive-img" alt="JS中的async与await怎么使用">
+                                
+                                <span class="card-title">JS中的async与await怎么使用</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    
+这篇文章主要介绍了JS的async/await怎么使用,简单来说，async/await是基于promises的语法糖，使异步代码更易于编写和阅读,下面来看详细的介绍内容吧。需要的小伙伴也可以参考一下
+
+一、asyncasync创建一个异
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/javaScript/" class="post-category">
+                                    javaScript
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/javaScript/"><span class="chip bg-color">javaScript</span></a>
+                            
+                            <a href="/seaven-blog/tags/async/"><span class="chip bg-color">async</span></a>
+                            
+                            <a href="/seaven-blog/tags/await/"><span class="chip bg-color">await</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>07</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/07/javascript/JavaScriptDeFangDouYuJieLiu/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/6.jpg" class="responsive-img" alt="JavaScript的防抖与节流">
+                                
+                                <span class="card-title">JavaScript的防抖与节流</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    
+这篇文章主要介绍了什么是JavaScript的防抖与节流,防抖是在频繁触发某一个事件时，一段时间内不再触发该事件后才会去调用对应的回调函数，在设定间隔时间内如果下一次事件被触发， 那么就重新开始定时器，直到事件触发结束，节流看下面文章的具
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/JavaScript/" class="post-category">
+                                    JavaScript
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/JavaScript/"><span class="chip bg-color">JavaScript</span></a>
+                            
+                            <a href="/seaven-blog/tags/js%E9%98%B2%E6%8A%96/"><span class="chip bg-color">js防抖</span></a>
+                            
+                            <a href="/seaven-blog/tags/js%E8%8A%82%E6%B5%81/"><span class="chip bg-color">js节流</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>07</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/07/hexo/HexoChengXuArchiveYeMianShuLiangSheZhi/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/18.jpg" class="responsive-img" alt="Hexo程序archive页面数量设置">
+                                
+                                <span class="card-title">Hexo程序archive页面数量设置</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    使用Hexo搭建博客已经有一段时间了，当文章数量达到十几篇左右时，突然发觉archive归档页面仅显示10篇文章，并且出现了分页功能，对于我们这种个人博客，文章数量不会很多，所以更希望是在一页中完全展示出来，便于访问者查找感兴趣的文章。
+在
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/Hexo/" class="post-category">
+                                    Hexo
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/Hexo/"><span class="chip bg-color">Hexo</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>07</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/07/hexo/HexoBoKeXiuGaiArchiveYeMianXianShiWenZhangShuLiang/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/20.jpg" class="responsive-img" alt="Hexo博客修改Archive页面显示文章数量">
+                                
+                                <span class="card-title">Hexo博客修改Archive页面显示文章数量</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    
+之前配置的Swiftype站内搜索功能很不稳定，经常因为网络问题无法返回搜索结果，所以要找写过的某篇文章就不太方便。为解决这个问题，有一个方法是在Archive页面上不分页，然后就可以用浏览器自带的搜索功能来搜索标题了。
+
+默认情况下，H
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/Hexo/" class="post-category">
+                                    Hexo
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/Hexo/"><span class="chip bg-color">Hexo</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>07</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/07/weChat/WinXinXiaoChengXuZhongShiYongVantKuangJiaDeJuTiBuZhou/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/16.jpg" class="responsive-img" alt="微信小程序中使用vant框架的具体步骤">
+                                
+                                <span class="card-title">微信小程序中使用vant框架的具体步骤</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    
+本文主要介绍了微信小程序中使用vant框架的具体步骤，文中通过示例代码介绍的非常详细，具有一定的参考价值，感兴趣的小伙伴们可以参考一下
+
+1.说到vant框架相信大家应该并不陌生了吧，做过移动端开发的小伙伴们应该都知道它吧。
+2.Vant
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
+                                    微信小程序
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="chip bg-color">微信小程序</span></a>
+                            
+                            <a href="/seaven-blog/tags/Vant/"><span class="chip bg-color">Vant</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>07</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/07/typescript/RuHeLiYongTypeScriptFengZhuangBenDiCunCu/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/7.jpg" class="responsive-img" alt="如何利用Typescript封装本地存储">
+                                
+                                <span class="card-title">如何利用Typescript封装本地存储</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    前言
+本地存储是前端开发过程中经常会用到的技术，但是官方api在使用上多有不便，且有些功能并没有提供给我们相应的api，比如设置过期时间等。本文无意于介绍关于本地存储概念相关的知识，旨在使用typescript封装一个好用的本地存储类。
+
+
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/TypeScript/" class="post-category">
+                                    TypeScript
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/typescript/"><span class="chip bg-color">typescript</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>07</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/07/typescript/XiangJieTypeScriptDeJiChuLeiXing/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/16.jpg" class="responsive-img" alt="详解TypeScript的基础类型">
+                                
+                                <span class="card-title">详解TypeScript的基础类型</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    
+这篇文章主要为大家介绍了TypeScript的基础类型，具有一定的参考价值，感兴趣的小伙伴们可以参考一下，希望能够给你带来帮助
+
+布尔类型1234// 布尔类型---&gt;boolean// let 变量名：数据类型 = 值let fl
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/TypeScript/" class="post-category">
+                                    TypeScript
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/typescript/"><span class="chip bg-color">typescript</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>07</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/07/weChat/WeiXinXiaoChengXuZhongWXSWenJianDeYiXieMiaoYongFenXiang/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/23.jpg" class="responsive-img" alt="微信小程序中wxs文件的一些妙用分享">
+                                
+                                <span class="card-title">微信小程序中wxs文件的一些妙用分享</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    前言wxs文件是小程序中的逻辑文件，它和wxml结合使用。
+不同于js， wxs可以直接作用到视图层，而不需要进行视图层和逻辑层的setData数据交互；
+因为这个特性，wxs非常适合应用于优化小程序的频繁交互操作中；
+应用过滤器在IOS环
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
+                                    微信小程序
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="chip bg-color">微信小程序</span></a>
+                            
+                            <a href="/seaven-blog/tags/wxs/"><span class="chip bg-color">wxs</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>07</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/07/javascript/JS_ZiFuCuanJieQuHanShu/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/23.jpg" class="responsive-img" alt="JS字符串截取函数">
+                                
+                                <span class="card-title">JS字符串截取函数</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    Bcrypt密码在线生成计算器
+这篇文章主要介绍了JS字符串截取函数实例，有需要的朋友可以参考一下
+
+使用 substring()或者slice()
+函数：split()功能：使用一个指定的分隔符把一个字符串分割存储到数组例子：
+123st
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-07
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/JavaScript/"><span class="chip bg-color">JavaScript</span></a>
+                            
+                            <a href="/seaven-blog/tags/Js%E7%9B%B8%E5%85%B3/"><span class="chip bg-color">Js相关</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>06</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/06/javascript/JS_bibao/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/15.jpg" class="responsive-img" alt="JS 闭包">
+                                
+                                <span class="card-title">JS 闭包</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    JS 闭包
+如果一个函数能访问另一个函数中的变量，则这个函数就称为闭包。最直接的是：函数a中定义了一个函数b，且在函数a外能够调用这个函数b，就会形成闭包。
+
+注意：闭包只能取得包含函数的变量的最后一个值，如:
+12345678910111
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-06
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/JavaScript/"><span class="chip bg-color">JavaScript</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>06</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/06/javascript/JS_ShiXianShuZuQuChong/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/12.jpg" class="responsive-img" alt="js实现数组去重的方式(7种)">
+                                
+                                <span class="card-title">js实现数组去重的方式(7种)</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    JS数组去重的方式例：将下面数组去除重复元素（以多种数据类型为例）
+1const arr = [1, 2, 2, &#x27;abc&#x27;, &#x27;abc&#x27;, true, true, false, false, und
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-06
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/JS%E7%9B%B8%E5%85%B3/"><span class="chip bg-color">JS相关</span></a>
+                            
+                            <a href="/seaven-blog/tags/JavaScript/"><span class="chip bg-color">JavaScript</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="cd-timeline-block">
+
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>06</span>
+            </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/seaven-blog/2022/04/06/nuxt/Nuxt.js_BCWindowIsNotDefined_documentIsNotDefined/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/seaven-blog/medias/featureimages/5.jpg" class="responsive-img" alt="Nuxt.js 报错 window is not defined || document is not defined">
+                                
+                                <span class="card-title">Nuxt.js 报错 window is not defined || document is not defined</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    Nuxt.js 报错 window is not defined || document is not defined情况1： 自己的写的函数里包含window等报错原因：因为Nuxt为服务器端渲染，所以在编译打包时会区分服务端渲染还是客户
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2022-04-06
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/seaven-blog/categories/Nuxt/" class="post-category">
+                                    Nuxt
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/seaven-blog/tags/Nuxt/"><span class="chip bg-color">Nuxt</span></a>
+                            
+                            <a href="/seaven-blog/tags/NuxtJs%E6%8A%A5%E9%94%99/"><span class="chip bg-color">NuxtJs报错</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+    </div>
+
+</main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a class="left btn-floating btn-large disabled">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">1 / 2</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a href="/seaven-blog/archives/2022/page/2/"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+<footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/seaven-blog/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #ff8800;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#ff8800'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/seaven-blog/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m12 l12 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2022</span>
+            
+            <span id="year">2020</span>
+            Seaven 版权所有
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                <i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "10";
+                    var startDate = "19";
+                    var startHour = "9";
+                    var startMinute = "7";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/seaven-blog/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/seaven-blog/libs/materialize/materialize.min.js"></script>
+    <script src="/seaven-blog/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/seaven-blog/libs/aos/aos.js"></script>
+    <script src="/seaven-blog/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/seaven-blog/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/seaven-blog/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/seaven-blog/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/seaven-blog/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/seaven-blog/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

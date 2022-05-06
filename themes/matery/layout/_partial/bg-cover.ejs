@@ -1,0 +1,19 @@
+<style>
+    .iframe-canvas{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 0;
+    }
+</style>
+<%
+var randomCanvas = Math.floor(Math.random() * 15) + 1;
+%>
+<div class="bg-cover pd-header about-cover">
+    <iframe src="https://www.jq22.com/js/a<%= randomCanvas === 6 ? randomCanvas + 1 : randomCanvas %>.html" class="iframe-canvas"></iframe>
+    <div class="container">
+    <%- partial('_partial/bg-cover-content') %>
+    </div>
+</div>

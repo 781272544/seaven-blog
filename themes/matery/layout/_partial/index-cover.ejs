@@ -1,0 +1,145 @@
+<style>
+    .carousel{
+        height: 450px !important;
+        background: #000 !important;
+    }
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+    .iframe-canvas{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 0;
+    }
+</style>
+
+<%
+// get all cover posts.
+var coverPosts = [];
+site.posts.forEach(function (post) {
+    if (post.cover) {
+        coverPosts.push(post);
+    }
+});
+var coverPostsCount = coverPosts.length;
+var randomCanvas = Math.floor(Math.random() * 15) + 1;
+%>
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true">
+    <% if (coverPostsCount > 0 && theme.cover.showPrevNext) { %>
+        <div id="prev-cover" class="left waves-effect carousel-control">
+            <i class="icon fa fa-angle-left"></i>
+        </div>
+        <div id="next-cover" class="right waves-effect carousel-control">
+            <i class="icon fa fa-angle-right"></i>
+        </div>
+    <% } %>
+
+    <iframe src="https://www.jq22.com/js/a<%= randomCanvas === 6 ? randomCanvas + 1 : randomCanvas %>.html" class="iframe-canvas"></iframe>
+
+    <div class="carousel-item white-text bg-cover about-cover">
+        <div class="container">
+            <%- partial('_partial/bg-cover-content') %>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('<%- theme.cover.duration %>'),
+            fullWidth: true,
+            indicators: '<%- theme.cover.showIndicators %>' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
+        <% if (theme.cover.autoLoop) { %>
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, <%- theme.cover.intervalTime %>);
+        };
+        autoCarousel();
+        <% } %>
+
+        function restartPlay() {
+            <% if (theme.cover.autoLoop) { %>
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            <% } %>
+        };
+
+        <% if (theme.cover.showPrevNext) { %>
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        <% } %>
+    });
+</script>
