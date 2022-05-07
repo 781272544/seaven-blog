@@ -13,8 +13,8 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://seaven.gitee.io/seaven-blog
-root: /seaven-blog
+url: https://www.68html.com
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -117,7 +117,7 @@ theme: matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://gitee.com/seaven/seaven-blog.git
-  branch: master
+  repo: git@github.com:781272544/seaven-blog.git
+  branch: 68html
   message: 发布并提交git
 
