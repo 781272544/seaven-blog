@@ -119,5 +119,5 @@ deploy:
   type: git
   repo: git@github.com:781272544/Seaven-blog.git
   branch: 68html
-  message: 发布并提交git
+  message: 发布并提交git_:year-:month-:day :HH:mm:ss
 
