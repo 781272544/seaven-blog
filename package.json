@@ -3,16 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "build": "hexo clean && hexo g && hexo d"
+    "build1": "hexo clean && hexo g && hexo d"
   },
   "hexo": {
     "version": "5.4.1"
   },
   "dependencies": {
-    "hexo": "^5.0.0",
+    "hexo": "^6.0.0",
     "hexo-admin": "^2.3.0",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
