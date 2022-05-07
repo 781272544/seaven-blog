@@ -1,5 +1,5 @@
 title: JS 闭包
-author: Seaven
+author: 68HTML
 date: 2022-04-06 17:36:52
 tags: ["JavaScript"]
 categories: ["前端"]

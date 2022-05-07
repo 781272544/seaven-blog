@@ -1,5 +1,5 @@
 title: nuxt.js性能提升 asyncData一次性请求多个接口, asyncData批处理请求
-author: Seaven
+author: 68HTML
 date: 2022-04-15 14:37:13
 tags: ["Nuxt","asyncData","asyncData批处理"]
 categories: ["Nuxt"]

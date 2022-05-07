@@ -1,5 +1,5 @@
 title: Nuxt.js 报错 window is not defined || document is not defined
-author: Seaven
+author: 68HTML
 date: 2022-04-06 12:22:13
 tags: ["Nuxt","NuxtJs报错"]
 categories: ["Nuxt"]

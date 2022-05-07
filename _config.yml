@@ -7,7 +7,7 @@ title: 68html-Web前端技术分享大全
 subtitle: 'WEB前端技术分享大全'
 description: '本站致力于收集、分享各种Web前端技术好文，以及插件和特效的详细使用方法,在线预览和教程'
 keywords: 'Vue分享学习,React分享学习,网页特效,网页模板,uni-app分享,Css3,Html5,Javascript,教程,JS特效'
-author: Seaven
+author: 68HTML
 language: zh-CN
 timezone: ''
 
@@ -66,11 +66,11 @@ index_generator:
   per_page: 12
   order_by: -date
 
-#后台管理登录帐号信息 & seaven@54
+#后台管理登录帐号信息 & 68HTML@54
 admin:
-  username: seaven0504
+  username: 68HTML0504
   password_hash: $2a$10$wKJiwYcUVBKIHpMPa6xTFOqQCHYmH4xXqCmYQS4z0QgFSV83SHQHG
-  secret: seaven
+  secret: 68HTML
 
 #搜索配置
 search:
@@ -111,13 +111,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jekyll-theme-cayman
+theme: matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:781272544/seaven-blog.git
+  repo: git@github.com:781272544/68HTML-blog.git
   branch: 68html
   message: 发布并提交git
 

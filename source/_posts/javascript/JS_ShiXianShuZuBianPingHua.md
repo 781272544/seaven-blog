@@ -1,5 +1,5 @@
 title: js实现数组扁平化
-author: Seaven
+author: 68HTML
 date: 2022-04-05 17:28:33
 tags: ["JS相关","JavaScript"]
 categories: ["前端"]

@@ -1,5 +1,5 @@
 title: 微信小程序中wxs文件的一些妙用分享
-author: Seaven
+author: 68HTML
 date: 2022-04-07 09:19:55
 tags: ["微信小程序","wxs"]
 categories: ["微信小程序"]

@@ -1,5 +1,5 @@
 title: JS字符串截取函数
-author: Seaven
+author: 68HTML
 date: 2022-04-07 09:13:42
 tags: ["Js相关","JavaScript"]
 categories: ["前端"]
