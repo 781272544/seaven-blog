@@ -30,40 +30,40 @@ categories: ["spring"]
 #### Spring对bean的管理细节
 
 
-  1.xml中创建bean的三种方式
+1.xml中创建bean的三种方式
 
-  	第一种方式：使用默认构造函数创建。在Spring的配置文件中使用bean标签，配以id和class属性之后，且没有其他属性和标签时。采用的就是默认构造函数创建bean对象，此时如果类中没有默认构造函数，则对象无法创建。
+第一种方式：使用默认构造函数创建。在Spring的配置文件中使用bean标签，配以id和class属性之后，且没有其他属性和标签时。采用的就是默认构造函数创建bean对象，此时如果类中没有默认构造函数，则对象无法创建。
 
-  ```
-  <bean id="userService" class="com.fc.service.imp.UserServiceImpl"></bean>
-  ```
+```
+<bean id="userService" class="com.fc.service.imp.UserServiceImpl"></bean>
+```
 
-  	第二种方式：使用普通工厂中的方法创建对象（把工厂的创建交给Spring来管理，然后使用工厂的bean来调用里面的方法来创建对象，并存入Spring容器）
+第二种方式：使用普通工厂中的方法创建对象（把工厂的创建交给Spring来管理，然后使用工厂的bean来调用里面的方法来创建对象，并存入Spring容器）
 
-  ```
-  <bean id="instanceFactory" class="com.fc.factory.InstanceFactory"></bean>
-  <bean id="userService" factory-bean="instanceFactory" factory-method="getUserService"></bean>
-  ```
+```
+<bean id="instanceFactory" class="com.fc.factory.InstanceFactory"></bean>
+<bean id="userService" factory-bean="instanceFactory" factory-method="getUserService"></bean>
+```
 
-  	第三种方式：使用工厂中的静态方法创建对象（使用某个类中的静态方法创建对象，并存入Spring容器）
+第三种方式：使用工厂中的静态方法创建对象（使用某个类中的静态方法创建对象，并存入Spring容器）
 
-  ```
+```
 <bean id="userService" class="com.fc.factory.StaticFactory" factory-method="getUserService"></bean>
-  ```
+```
 
-  2.bean对象的作用范围
+2.bean对象的作用范围
 
-  	bean标签的scope属性：
+bean标签的scope属性：
 
-  		作用：用于指定bean对象的作用范围
+作用：用于指定bean对象的作用范围
 
-  		取值：singleton:单例的（默认值）
+取值：singleton:单例的（默认值）
 
   ​			    prototype：多例的
 
-  			    request：作用于web应用的请求范围，第一次请求有效，其他请求无效(转发有效，重定向无效)
+request：作用于web应用的请求范围，第一次请求有效，其他请求无效(转发有效，重定向无效)
 
-  			    session：作用于web应用的会话范围，同一次会话有效(无论怎么跳转都有效，退出系统后无效)
+session：作用于web应用的会话范围，同一次会话有效(无论怎么跳转都有效，退出系统后无效)
 
   ​			    global-session：作用于集群环境的会话范围，当不是集群环境时，它就是session
 
@@ -77,15 +77,15 @@ categories: ["spring"]
 
   ​		死亡：容器销毁，对象消亡
 
-  		总结：单例对象的生命周期和容器相同
+总结：单例对象的生命周期和容器相同
 
-  	多例对象：
+多例对象：
 
-  		出生：当我们使用对象时Spring框架为我们创建
+出生：当我们使用对象时Spring框架为我们创建
 
-  		活着：对象只要是在使用过程中就一直活着
+活着：对象只要是在使用过程中就一直活着
 
-  		死亡：当对象长时间不用，且没有别的对象引用，由Java的垃圾回收器回收
+死亡：当对象长时间不用，且没有别的对象引用，由Java的垃圾回收器回收
 
 #### Spring中的依赖注入
 
