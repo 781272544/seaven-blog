@@ -3,22 +3,17 @@
 <% } else { %>
     <%- partial('_partial/bg-cover') %>
 <% } %>
-
 <main>
     <% if (site.tags && site.tags.length > 0) { %>
         <%- partial('_widget/tag-wordcloud') %>
     <% } %>
 </main>
-
-
 <main class="content">
-
     <%
     var hashCode = function (str) {
         if (!str && str.length === 0) {
             return 0;
         }
-
         var hash = 0;
         for (var i = 0, len = str.length; i < len; i++) {
             hash = ((hash << 5) - hash) + str.charCodeAt(i);
@@ -27,7 +22,6 @@
         return hash;
     };
     %>
-
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
