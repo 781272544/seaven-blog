@@ -6,6 +6,8 @@ categories: ["element"]
 ---
 
 ```js
+import { compress, compressAccurately } from 'image-conversion'
+
 function handleBeforeUpload(file){
     return new Promise((resolve, reject) => {
         if (file.size / 1024 > 200) { // 大于 200 kb 就压缩
