@@ -193,7 +193,9 @@ categories: ["javascript"]
 ```
 ###6、自定义方法：
 使用template.helper(name,function)注册方法
-在模板中，与其他参数一样，用{{}}调用
+
+在模板中，与其他参数一样，用调用
+
 示例：
 ```html
 //模板内调用
