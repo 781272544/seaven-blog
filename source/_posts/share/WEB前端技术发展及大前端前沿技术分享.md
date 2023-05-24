@@ -139,7 +139,8 @@ WebGL: 游戏、地图、数字孪生...
 3. webSql   本地数据库，类似mysql。
 4. PWA  渐进式Web APP   https://blog.csdn.net/weixin_44135121/article/details/105528430
 5. Server Push 服务器推送   https://www.jianshu.com/p/d1eb370d0247
-6. WebAssembly  简称wasm，是一个虚拟微处理器。https://www.jianshu.com/p/e4d002780cf8
+6. File System Access API 是一项 Web API，允许 Web 应用程序从用户设备的本地文件系统中读取和写入文件。  https://mp.weixin.qq.com/s/Rtei0zXBQ5hre_EBB1rWEA
+7. WebAssembly  简称wasm，是一个虚拟微处理器。https://www.jianshu.com/p/e4d002780cf8
 ...
 
 ## 2 Node领域
@@ -160,8 +161,17 @@ Deno 看起来为了一些很小的益处承担了巨大的责任和代价，包
 
 但Deno还是引领了一些创新的方向，比如import-http、esm.run、CJS to ESM等，可以说都是Deno探索间接或直接作用的结果。
 
+## 3 云开发
+云开发（CloudBase）是云端一体化的后端云服务 ，采用 serverless 架构，免去了移动应用构建中繁琐的服务器搭建和运维。同时云开发提供的静态托管、命令行工具（CLI）、Flutter SDK 等能力降低了应用开发的门槛。使用云开发可以构建完整的小程序/小游戏、H5、Web、移动 App 等应用。
+微信云开发：https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html
 
-## 3 一码多端
+阿里云开发：https://workbench.aliyun.com/
+
+uniCloud：是 DCloud 联合阿里云、腾讯云，为开发者提供的基于 serverless 模式和 js 编程的云开发平台。
+
+官网：https://uniapp.dcloud.net.cn/uniCloud/
+
+## 4 一码多端
 随着前端构建技术的告诉发展，优秀的构建框架如雨后春笋涌现，Web应用在跨端方面表现的能力越来越强。一套代码多端通用带来的人效提升尤为明显。并且越来越多的需求被前端技术占据，原生移动开发将越来越少。
 
 以Electron为代表的前端桌面应用技术的出现，意味着前端技术也出现在桌面端了；尽管它可能不会成为桌面开发的主流，但它意味着一个极具性价比的可选方案出现，会越来越多的出现使用这种方案的桌面应用；知名的阿里云盘、飞书、vscode（专业级）、Slack、Thiea等都是基于Electron前端技术开发的。
@@ -182,7 +192,7 @@ Weex集成了 WeexSDK 之后，你可以使用 JavaScript 语言和前端开发�
 
 鸿蒙APP开发、智能手表开发...
 
-## 4 IoT
+## 5 IoT
 物联网就是互联网+智能终端，物联网的基础是成熟的互联网体系，核心是信息传递与交互控制，在互联网的基础上延伸并扩展到任何人与物之间、物与物之间，进行载体间信息的智能化处理和通信控制。
 
 随着网络技术的提升，比如web3.0等技术的发展，物联网关键传感器，网络节点等技术的发展，那么前端就不仅单指与人面对的这部分前端了，至少是指系统与系统交互的前端部分，这里的系统可以是人为设计系统也可以是人。
@@ -199,7 +209,7 @@ Weex集成了 WeexSDK 之后，你可以使用 JavaScript 语言和前端开发�
 
 <font color="red">IoT硬件开发平台：https://ruff.io/zh-cn/ </font>
 
-## 5 前端智能化
+## 6 前端智能化
 从最初的脚手架工具、组件库、持续集成体系、自动化测试、多端适配到现在的全面的低代码平台、前端智能化、在线 IDE，大家都在为未来的新的且高效率的方式做着努力。
 
 效率工具永远是开发者的朋友，这些工具和技术可以把我们从重复工作的泥潭中解脱出来，分配更多的精力到创造性的工作中来。
