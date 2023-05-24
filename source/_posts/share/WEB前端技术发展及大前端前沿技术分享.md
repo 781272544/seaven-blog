@@ -168,9 +168,8 @@ Deno 看起来为了一些很小的益处承担了巨大的责任和代价，包
 
 2. 阿里云开发：https://workbench.aliyun.com/
 
-3. uniCloud：是 DCloud 联合阿里云、腾讯云，为开发者提供的基于 serverless 模式和 js 编程的云开发平台。
-
-官网：https://uniapp.dcloud.net.cn/uniCloud/
+3. uniCloud：是 DCloud 联合阿里云、腾讯云，为开发者提供的基于 serverless 模式和 js 编程的云开发平台。 
+   官网：https://uniapp.dcloud.net.cn/uniCloud/
 
 ## 4 一码多端
 随着前端构建技术的告诉发展，优秀的构建框架如雨后春笋涌现，Web应用在跨端方面表现的能力越来越强。一套代码多端通用带来的人效提升尤为明显。并且越来越多的需求被前端技术占据，原生移动开发将越来越少。
