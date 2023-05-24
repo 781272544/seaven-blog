@@ -163,11 +163,12 @@ Deno 看起来为了一些很小的益处承担了巨大的责任和代价，包
 
 ## 3 云开发
 云开发（CloudBase）是云端一体化的后端云服务 ，采用 serverless 架构，免去了移动应用构建中繁琐的服务器搭建和运维。同时云开发提供的静态托管、命令行工具（CLI）、Flutter SDK 等能力降低了应用开发的门槛。使用云开发可以构建完整的小程序/小游戏、H5、Web、移动 App 等应用。
-微信云开发：https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html
 
-阿里云开发：https://workbench.aliyun.com/
+1. 微信云开发：https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html
 
-uniCloud：是 DCloud 联合阿里云、腾讯云，为开发者提供的基于 serverless 模式和 js 编程的云开发平台。
+2. 阿里云开发：https://workbench.aliyun.com/
+
+3. uniCloud：是 DCloud 联合阿里云、腾讯云，为开发者提供的基于 serverless 模式和 js 编程的云开发平台。
 
 官网：https://uniapp.dcloud.net.cn/uniCloud/
 
