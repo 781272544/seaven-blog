@@ -16,7 +16,7 @@ git提交commit时Perform code analysis卡住很久
 
 Perform code analysis:提交前代码分析
 
-![](/images/954ad45cb4584dee88258887e904e879.png "")
+![](https://oss-wuhan.sangforcloud.com:12000/jhtech-fileserver-bucket/crm/68/954ad45cb4584dee88258887e904e879.png "")
 
 4、关闭所有已打开的项目窗口，关闭IDEA,重新打开IDEA。
 
