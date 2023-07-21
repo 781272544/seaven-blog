@@ -5,19 +5,26 @@ tags: ["node","Docx-merger","生产world"]
 categories: ["node"]
 ---
 
-##一、搭建项目运行环境
-1. 项目初始化
+## 一、搭建项目运行环境
+
+1.项目初始化
+
 ```
 npm init -y
 ```
+
 2.安装docx-merger插件依赖
+
 ```
 npm install docx-merger
 ```
 
-##二、代码
-###1.JS代码 
+## 二、代码
+
+1.JS代码 
+
 Docx-merger的核心代码 
+
 ```js
 
 var DocxMerger = require('./docx-merger');
@@ -35,7 +42,9 @@ docx.save('nodebuffer', function (data) {
     fs.writeFile("output.docx", data, function (err) {/*...*/ });
 });
 ```
+
 2.HTML代码
+
 ```html
 
 <html>
@@ -68,7 +77,9 @@ docx.save('nodebuffer', function (data) {
  
 </html>
 ```
+
 2.2  promise.html
+
 ```html
 <html>
 <script src="./node_modules/docx-merger/dist/docx-merger.min.js"></script>
